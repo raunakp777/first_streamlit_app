@@ -34,14 +34,15 @@ fruit_choice = sl.text_input('What fruit would you like information about?','Kiw
 sl.write('The user entered ', fruit_choice)
 
 
-fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 # take json version and normalize it
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # output df as table
 sl.dataframe(fruityvice_normalized)
 
-
+#dont run anything after
+sl.stop()
 
 
 ##snowflake connections
