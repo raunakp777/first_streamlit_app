@@ -35,7 +35,7 @@ try:
   fruit_choice = sl.text_input('What fruit would you like information about?','Kiwi')
   if not fruit_choice:
     sl.error("Please select a fruit to get information")
-   else:
+  else:
     fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + fruit_choice)
     fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
     sl.dataframe(fruityvice_normalized)
