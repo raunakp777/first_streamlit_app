@@ -31,7 +31,13 @@ sl.dataframe(fruits_to_show)
 sl.header("Fruityvice Fruit Advice!")
 
 fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
-sl.text(fruityvice_response.json())
+
+
+# take json version and normalize it
+fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+# output df as table
+sl.dataframe(fruityvice_normalized)
+
 
 
 
