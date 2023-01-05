@@ -65,7 +65,7 @@ if sl.button ('Get Fruit Load List'):
 
 
 #dont run anything after
-sl.stop()
+#sl.stop()
  
 
  #allow user to add a fruit to the list
