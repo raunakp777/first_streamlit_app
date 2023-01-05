@@ -30,7 +30,7 @@ sl.dataframe(fruits_to_show)
 
 sl.header("Fruityvice Fruit Advice!")
 
-fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + "kiwi")
 
 
 # take json version and normalize it
