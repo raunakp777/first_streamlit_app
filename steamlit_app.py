@@ -47,10 +47,6 @@ try:
 
 except URLError as e:
    sl.error()
-    
-    
-#dont run anything after
-sl.stop()
 
 
 ##snowflake connections
@@ -66,6 +62,10 @@ if sl.button ('Get Fruit Load List'):
  my_cnx = snowflake.connector.connect(**sl.secrets["snowflake"])
  my_data_rows = get_fruit_load_list()
  sl.dataframe(my_data_rows)
+
+
+#dont run anything after
+sl.stop()
  
 
 add_my_fruit = sl.text_input('What fruit would you like to add?','Jackfruit') 
